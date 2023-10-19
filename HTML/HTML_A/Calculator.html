@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+
+    <table class="calculator" cellspacing="0"  cellpadding="0">
+        <tr>
+          <td colspan="3"> <div class="display" id="display">0</div>  </td>
+       
+          <!-- clearScreen() function clears all the values -->
+          <td> <div class="key1" value="C" onclick="clearDisplay()" id="btn" >AC</div> </td>
+        </tr>
+        <tr>
+          <td> <div class="key" value="7" onclick="appendToDisplay('7')" >7</div> </td>
+          <td> <div class="key" value="8" onclick="appendToDisplay('8')" >8</div></td>
+          <td> <div class="key" value="9" onclick="appendToDisplay('9')" >9</div> </td>
+          <td> <div class="key2" value="+" onclick="performOperation('+')" >+</div> </td>
+        </tr>
+        <tr>
+            <td> <div  class="key" value="4" onclick="appendToDisplay('4')" >4</div> </td>
+            <td> <div  class="key" value="5" onclick="appendToDisplay('5')" >5</div> </td>
+            <td> <div  class="key" value="6" onclick="appendToDisplay('6')" >6</div> </td>
+            <td> <div  class="key2" value="-" onclick="performOperation('-')" >-</div> </td>
+          </tr>
+        <tr>
+            <!-- display() function displays the value of clicked button -->
+            <td> <div  class="key" value="1" onclick="appendToDisplay('1')" >1 </div></td>
+            <td> <div  class="key" value="2" onclick="appendToDisplay('2')" > 2</div></td>
+            <td> <div  class="key" value="3" onclick="appendToDisplay('3')" >3</div> </td>
+            <td> <div  class="key2" value="/" onclick="performOperation('/')" >/</div> </td>
+          </tr>
+        <tr>
+          <td> <div  class="key" value="." onclick="appendToDisplay('.')" >.</div> </td>
+          <td> <div  class="key" value="0" onclick="appendToDisplay('0')" >0</div> </td>
+       
+          <!-- calculate() function evaluates the mathematical expression -->
+          <td> <div  class="key" value="=" onclick="calculateResult()" id="btn" >=</div> </td>
+          <td> <div  class="key2" value="*" onclick="performOperation('*')" >*</div> </td>
+        </tr>
+      </table>
+
+    <script src="script.js"></script>
+</body>
+</html>

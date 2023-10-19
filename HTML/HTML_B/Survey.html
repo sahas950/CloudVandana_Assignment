@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body style="background-color: blue;">
+    <div class="container">
+        <h2>Survey Form</h2>
+        <form id="surveyForm" onsubmit="return submitForm()">
+            <div class="form-group">
+                <label for="firstName">First Name:</label>
+                <input type="text" id="firstName" name="First_Name" required>
+            </div>
+            <div class="form-group">
+                <label for="lastName">Last Name:</label>
+                <input type="text" id="lastName" name="Last_Name" required>
+            </div>
+            <div class="form-group">
+                <label for="dob">Date of Birth:</label>
+                <input type="date" id="dob" name="DOB" required>
+            </div>
+            <div class="form-group">
+                <label for="country">Country:</label>
+                <select id="country" name="Country" required>
+                    <option value="">Select Country</option>
+                    <option value="India">India</option>
+                    <option value="USA">USA</option>
+                    <option value="Canada">Canada</option>
+                    <!-- Add more countries as needed -->
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Gender:</label>
+                <input type="radio" id="gender" name="Gender" value="Male" required> Male
+                <input type="radio" id="gender" name="Gender" value="Female" required> Female
+            </div>
+            <div class="form-group">
+                <label for="profession">Profession:</label>
+                <input type="text" id="profession" name="Profession" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="Email" required>
+            </div>
+            <div class="form-group">
+                <label for="mobile">Mobile Number:</label>
+                <input type="tel" id="mobile" name="Mobile"  pattern="^\d{10}$" required>
+            </div>
+            <div class="buttons">
+                <button type="submit" id="submitButton">Submit</button>
+                <button type="button" id="resetButton" onclick="resetForm()">Reset</button>
+            </div>
+        </form>
+    </div>
+    <div class="popup" id="popup">
+        <div class="popup-content">
+            <span class="close" onclick="closePopup()">&times;</span>
+            <h3>Survey Form Data</h3>
+            <ul id="formData"></ul>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
